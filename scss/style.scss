@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+@import './theme';
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+// html {
+//     font-size: 16px;
+//     width: 100%;
+// }
+
+::-webkit-scrollbar-track {
+    background-color: $background_color_2;
+}
+
+::-webkit-scrollbar {
+    border-radius: 1rem;
+    width: 0.2rem;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: $color_5;
+}
+
+// .btn{
+//     font-size: 1rem;
+//     color: $color_1;
+//     background-color: $color_12;
+//     border: none;
+//     padding: 0.4rem 1.5rem;
+//     border-radius: 0.25rem;
+//     transition: all 0.3s ease;
+
+//     &:hover{
+//         color: $color_1;
+//         background-color: $color_3;
+//     }
+// }
+
+body {
+    font-family: $font_family_2;
+    color: #444444;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    color: $color_1;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $color_12;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font_family_1;
+}
+
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: $color_1;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: all 0.4s;
+
+    i {
+        font-size: 24px;
+        color: #fff;
+        line-height: 0;
+    }
+
+    &:hover {
+        background: $color_13;
+        color: #fff;
+    }
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: $ss-sm) {
+    [data-aos-delay] {
+        transition-delay: 0 !important;
+    }
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: $color_5;
+
+    &::before {
+        content: "";
+        position: fixed;
+        top: calc(50% - 0px);
+        left: calc(50% - 30px);
+        border: 6px solid $color_13;
+        border-top-color: rgba($color: #000000, $alpha: 0.2);
+        border-bottom-color: rgba($color: #000000, $alpha: 0.2);
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: animate-preloader 1s linear infinite;
+        z-index: 100;
+    }
+}
+
+@-webkit-keyframes animate-preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-preloader {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.section-bg {
+    background-color: $background_color_2;
+}
+
+.section-title {
+    margin-bottom: 60px;
+    position: relative;
+    padding-bottom: 20px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 60px;
+        height: 5px;
+        background: $color_1;
+        bottom: 0;
+        left: calc(50% - 25px);
+    }
+
+    h2 {
+        font-size: 36px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    p {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        font-size: 18px;
+        font-weight: 500;
+        color: #9195a2;
+    }
+}
+
+
+@import './haf/header';
+@import './haf/footer';
+
+@import './sections/hero';
+@import './sections/org';
+@import './sections/about';
+@import './sections/features';
+@import './sections/timeline';
+@import './sections/contact';
+@import './sections/team';
+@import './sections/venue';
+@import './pages/register';
+@import './pages/schedule';
+
