@@ -567,7 +567,7 @@ section {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("/images/conference_background.jpg") top center;
+  background: url("/images/hero_bg.png") top center;
   background-size: cover;
   position: relative;
   padding: 0;
